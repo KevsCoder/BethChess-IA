@@ -58,7 +58,7 @@ function makeBestMove() {
 function minimaxRoot(depth, game, isMaximisingPlayer) {
 
     var gameMoves = game.moves()
-    var bestValue = -9999999
+    var bestValue = -10000
     var bestMove = null
 
     for (var i = 0; i < gameMoves.length; i++) {
@@ -67,6 +67,8 @@ function minimaxRoot(depth, game, isMaximisingPlayer) {
 
         var value = minimax(depth - 1, game, !isMaximisingPlayer)
         game.undo()
+
+        alert(value)
 
         if (value >= bestValue) {
             bestValue = value
@@ -80,12 +82,18 @@ function minimaxRoot(depth, game, isMaximisingPlayer) {
 
 function minimax(depth, game, isMaximisingPlayer) {
     positionCount++
+
+    if(game.in_checkmate()){
+        
+        alert("Mate")
+          return -999999
+
+      }
+
     if (depth === 0) {
 
-        if(game.in_checkmate()){
-            return -9999999
-        }
-
+      
+     
         return -evaluateBoard(game.board())
     }
 
@@ -97,18 +105,18 @@ function minimax(depth, game, isMaximisingPlayer) {
 
         for(var i=0;i<newGameMoves.length;i++){
             game.move(newGameMoves[i])
-            bestMove = Math.max(bestValue, minimax(depth-1, game, !isMaximisingPlayer))
+            bestMove = Math.max(bestValue, minimax(depth-1, game, isMaximisingPlayer))
             game.undo()
         }
 
         return bestMove
 
     } else {
-        var bestValue = 100000
+        var bestValue = -10000
 
         for(var i=0;i<newGameMoves.length;i++){
             game.move(newGameMoves[i])
-            bestMove = Math.min(bestValue, minimax(depth-1, game, isMaximisingPlayer))
+            bestMove = Math.max(bestValue, minimax(depth-1, game, !isMaximisingPlayer))
             game.undo()
         }
 
