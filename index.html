@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="myBoard" style="width: 600px"></div>
+    <button id="startBtn">Start Position</button>
+    <button id="clearBtn">Clear Board</button>
+    <script src="js/jquery.js"></script>
+    <script src="js/chessboard-1.0.0.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/IA.js"></script>
+
+
+    <script>
+
+
+        
+
+        $('#startBtn').on('click', board.start)
+        $('#clearBtn').on('click', board.clear)
+
+
+        // while (!chess.game_over()) {
+        //     const moves = chess.moves()
+        //     const move = moves[Math.floor(Math.random() * moves.length)]
+        //     chess.move(move)
+
+
+        // }
+
+    // --- End Example JS ----------------------------------------------------------
+    </script>
+
+
+
+
+</body>
+
+</html>
