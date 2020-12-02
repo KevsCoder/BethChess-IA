@@ -1,0 +1,20 @@
+body{
+   
+    background-color: #312e2b;
+
+    font-size: large;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#inner {
+    display: table;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+  }
+  
+  #outer {
+    /* border: 1px solid red; */
+    width:100%
+  }
+

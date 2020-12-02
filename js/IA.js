@@ -65,7 +65,7 @@ function minimaxRoot(depth, game, isMaximisingPlayer) {
         var newMove = gameMoves[i]
         game.move(newMove)
 
-        var value = minimax(depth - 1, game, !isMaximisingPlayer)
+        var value = minimax(depth - 1, game, -100000, 100000,  !isMaximisingPlayer)
         game.undo()
 
         
@@ -80,7 +80,7 @@ function minimaxRoot(depth, game, isMaximisingPlayer) {
 
 }
 
-function minimax(depth, game, isMaximisingPlayer) {
+function minimax(depth, game, alpha, beta, isMaximisingPlayer) {
     positionCount++
 
     
@@ -122,6 +122,11 @@ function minimax(depth, game, isMaximisingPlayer) {
 
             bestMove = Math.max(bestValue, minimax(depth-1, game, !isMaximisingPlayer))
             game.undo()
+
+            alpha = Math.max(alpha, bestMove);
+            if (beta <= alpha) {
+                return bestMove;
+            }
         }
 
         return bestMove

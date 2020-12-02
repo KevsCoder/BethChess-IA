@@ -5,19 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/chessboard-1.0.0.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
 
-    <div id="myBoard" style="width: 600px"></div>
-    <button id="startBtn">Start Position</button>
-    <button id="clearBtn">Clear Board</button>
-    <script src="js/jquery.js"></script>
-    <script src="js/chessboard-1.0.0.js"></script>
-    <script src="js/chess.js"></script>
-    <script src="js/IA.js"></script>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Beth IA</span>
+      </nav>
 
+      
+
+      <div style="padding-top: 10px;" id="outer">
+        <div id="inner">
+
+            <img src="img/p1.PNG"  class="img-fluid" alt="Responsive image" style="border-radius: 10px;" width="55px" height="55px">
+            Beth Harmon
+        
+           
+            <div id="myBoard" style="width: 450px;padding-top: 10px;"></div>
+            <img src="img/bicho.jpg"  alt="Responsive image" style="border-radius: 10px;" width="55px" height="55px">
+            Cristiano Ronaldo
+
+        </div>
+      </div>
+
+  
+    
+  
+    <!-- <button id="startBtn">Start Position</button>
+    <button id="clearBtn">Clear Board</button> -->
 
     <script>
 
@@ -41,6 +62,11 @@
 
 
 
+<script src="js/jquery.js"></script>
+<script src="js/chessboard-1.0.0.js"></script>
+<script src="js/chess.js"></script>
+<script src="js/IA.js"></script>
+<script src="js/bootstrap.js"></script>
 
 </body>
 
