@@ -8,65 +8,56 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   
     <title>Document</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1">Beth IA</span>
-      </nav>
+        <span class="navbar-brand mb-0 h1">Proyecto Final IA</span>
+    </nav>
 
-      
 
-      <div style="padding-top: 10px;" id="outer">
-        <div id="inner">
+    <div class="hero">
 
-            <img src="img/p1.PNG"  class="img-fluid" alt="Responsive image" style="border-radius: 10px;" width="55px" height="55px">
-            Beth Harmon
-        
-           
-            <div id="myBoard" style="width: 450px;padding-top: 10px;"></div>
-            <img src="img/bicho.jpg"  alt="Responsive image" style="border-radius: 10px;" width="55px" height="55px">
-            Cristiano Ronaldo
+        <div style="padding-top: 10px;" id="outer">
+            <div id="inner">
 
+                <img src="img/p1.PNG" class="img-fluid" alt="Responsive image" style="border-radius: 10px;" width="55px"
+                    height="55px">
+                Beth Harmon
+                <div class="whitePieces" style="float: right;">
+
+                </div>
+
+
+                <div id="myBoard" style="width: 700px;padding-top: 10px;"></div>
+                <img src="img/bicho.jpg" alt="Responsive image" style="border-radius: 10px;" width="55px" height="55px">
+                Cristiano Ronaldo
+                <div class="blackPieces" height="120px" style="float: right;">
+
+                </div>
+
+            </div>
         </div>
-      </div>
 
-  
+    </div>
     
-  
-    <!-- <button id="startBtn">Start Position</button>
-    <button id="clearBtn">Clear Board</button> -->
-
-    <script>
-
-
-        
-
-        $('#startBtn').on('click', board.start)
-        $('#clearBtn').on('click', board.clear)
-
-
-        // while (!chess.game_over()) {
-        //     const moves = chess.moves()
-        //     const move = moves[Math.floor(Math.random() * moves.length)]
-        //     chess.move(move)
-
-
-        // }
-
-    // --- End Example JS ----------------------------------------------------------
-    </script>
 
 
 
-<script src="js/jquery.js"></script>
-<script src="js/chessboard-1.0.0.js"></script>
-<script src="js/chess.js"></script>
-<script src="js/IA.js"></script>
-<script src="js/bootstrap.js"></script>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/chessboard-1.0.0.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/IA.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 
 </body>
 

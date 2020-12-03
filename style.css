@@ -1,6 +1,11 @@
-body{
-   
-    background-color: #312e2b;
+html, body{
+  margin: 0;
+  padding: 0;
+
+
+    background-color: #1F2833;
+    
+
 
     font-size: large;
     color: white;
@@ -17,4 +22,3 @@ body{
     /* border: 1px solid red; */
     width:100%
   }
-
